@@ -10,7 +10,7 @@
 
 #include "cloud_msgs/cloud_info.h"
 
-#include <opencv/cv.h>
+#include <opencv2/opencv.hpp>
 
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
@@ -54,8 +54,8 @@ typedef pcl::PointXYZI  PointType;
 
 // extern const string pointCloudTopic = "/velodyne_points";
 // extern const string pointCloudTopic = "/kitti_scan";
-extern const string pointCloudTopic = "/os1_points";
-extern const string imuTopic = "/imu/data";
+extern const string pointCloudTopic = "/concat_cloud";
+extern const string imuTopic = "/imu";
 
 // Save pcd
 extern const string fileDirectory = "/tmp/";
@@ -98,11 +98,19 @@ extern const bool useCloudRing = false; // if true, ang_res_y and ang_bottom are
 // extern const int groundScanInd = 7;
 
 // Ouster OS1-64
-extern const int N_SCAN = 64;
+// extern const int N_SCAN = 64;
+// extern const int Horizon_SCAN = 1024;
+// extern const float ang_res_x = 360.0/float(Horizon_SCAN);
+// extern const float ang_res_y = 33.2/float(N_SCAN-1);
+// extern const float ang_bottom = 16.6+0.1;
+// extern const int groundScanInd = 15;
+
+// Current Sensor (TODO Modify this to accept params form file)
+extern const int N_SCAN = 464;
 extern const int Horizon_SCAN = 1024;
 extern const float ang_res_x = 360.0/float(Horizon_SCAN);
 extern const float ang_res_y = 33.2/float(N_SCAN-1);
-extern const float ang_bottom = 16.6+0.1;
+extern const float ang_bottom = 1;
 extern const int groundScanInd = 15;
 
 extern const bool loopClosureEnableFlag = true;
