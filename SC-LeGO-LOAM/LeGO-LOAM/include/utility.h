@@ -106,11 +106,11 @@ extern const bool useCloudRing = false; // if true, ang_res_y and ang_bottom are
 // extern const int groundScanInd = 15;
 
 // Current Sensor (TODO Modify this to accept params form file)
-extern const int N_SCAN = 464;
+extern const int N_SCAN = 128;
 extern const int Horizon_SCAN = 1024;
 extern const float ang_res_x = 360.0/float(Horizon_SCAN);
-extern const float ang_res_y = 33.2/float(N_SCAN-1);
-extern const float ang_bottom = 1;
+extern const float ang_res_y =  41.33/float(N_SCAN-1);
+extern const float ang_bottom = 0.1;
 extern const int groundScanInd = 15;
 
 extern const bool loopClosureEnableFlag = true;
