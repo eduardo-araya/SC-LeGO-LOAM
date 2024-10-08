@@ -56,6 +56,7 @@ typedef pcl::PointXYZI  PointType;
 // extern const string pointCloudTopic = "/kitti_scan";
 extern const string pointCloudTopic = "/concat_cloud";
 extern const string imuTopic = "/imu";
+//extern const string imuTopic = "/livox/imu_192_168_148_43";
 
 // Save pcd
 extern const string fileDirectory = "/tmp/";
@@ -112,6 +113,14 @@ extern const float ang_res_x = 360.0/float(Horizon_SCAN);
 extern const float ang_res_y =  41.33/float(N_SCAN-1);
 extern const float ang_bottom = 0.1;
 extern const int groundScanInd = 15;
+
+// Auxiloiary config:
+// extern const int N_SCAN = 460;
+// extern const int Horizon_SCAN = 1024;
+// extern const float ang_res_x = 360.0/float(Horizon_SCAN);
+// extern const float ang_res_y =  181.33/float(N_SCAN-1);
+// extern const float ang_bottom = 0.1;
+// extern const int groundScanInd = 15;
 
 extern const bool loopClosureEnableFlag = true;
 extern const double mappingProcessInterval = 0.3;
